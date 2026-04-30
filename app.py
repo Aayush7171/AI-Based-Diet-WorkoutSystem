@@ -165,7 +165,7 @@ def get_meal_guidance(diet_recommendation):
     )
 
 
-st.title("Fitness Calories Predictor")
+st.title("Diet & Workout Recommender")
 st.write(
     "Predict calories burned, then get exercise suggestions and diet recommendations "
     "matched to your daily calorie intake."
