@@ -7,7 +7,7 @@ import streamlit as st
 from training_config import FEATURE_COLUMNS
 
 
-st.set_page_config(page_title="Fitness Calories Predictor", layout="wide")
+st.set_page_config(page_title="Diet & Workout Recommender", layout="wide")
 
 EXERCISE_FILE = "Exercise.csv"
 DIET_PLAN_FILE = "diet_recommendations_dataset.csv"
