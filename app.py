@@ -42,10 +42,10 @@ def load_data():
 
 def get_activity_level(calories_burned):
     if calories_burned < 250:
-        return "Sedentary"
+        return "Less Active,Do more Workout"
     if calories_burned < 500:
-        return "Moderate"
-    return "Active"
+        return "Moderate Active"
+    return "Highly Active"
 
 
 def predict_calories(model_object, input_data):
@@ -208,7 +208,7 @@ if st.button("Predict Calories Burned"):
     activity_level = get_activity_level(predicted_calories)
 
     st.success(f"Estimated Calories Burned: {predicted_calories:.2f} kcal")
-    st.info(f"Suggested activity band: {activity_level}")
+    st.info(f"Activity band: {activity_level}")
 
     exercise_summary = recommend_exercises(
         predicted_calories, gender, experience, workout_days, bmi, exercise_df
