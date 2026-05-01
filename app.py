@@ -191,7 +191,8 @@ with col2:
 
 bmi = weight / (height * height)
 st.caption(f"Calculated BMI: {bmi:.2f}")
-
+protein = weight * 1.6
+st.caption(f"Recommended Protein Intake: {protein:.1f} grams/day")
 exercise_df, diet_plan_df = load_data()
 gender_val = 0 if gender == "Male" else 1
 
