@@ -189,7 +189,9 @@ with col2:
             "Session Duration (hours)", min_value=0.0, max_value=3.0, value=1.0
         )
         experience = st.selectbox("Experience Level", [0, 1, 2, 3], index=0)
-
+    else:
+        session_duration = 0.0
+        experience = 0
 bmi = weight / (height * height)
 st.caption(f"Calculated BMI: {bmi:.2f}")
 protein = weight * 1.6
