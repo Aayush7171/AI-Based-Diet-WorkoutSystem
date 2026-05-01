@@ -184,10 +184,11 @@ with col1:
 
 with col2:
     workout_days = st.slider("Workout Days per Week", min_value=0, max_value=7, value=3)
-    session_duration = st.number_input(
-        "Session Duration (hours)", min_value=0.5, max_value=3.0, value=1.0
-    )
-    experience = st.selectbox("Experience Level", [1, 2, 3], index=0)
+    if(workout_days > 0):
+        session_duration = st.number_input(
+            "Session Duration (hours)", min_value=0.0, max_value=3.0, value=1.0
+        )
+        experience = st.selectbox("Experience Level", [0, 1, 2, 3], index=0)
 
 bmi = weight / (height * height)
 st.caption(f"Calculated BMI: {bmi:.2f}")
